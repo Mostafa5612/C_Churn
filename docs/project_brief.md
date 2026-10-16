@@ -1,70 +1,87 @@
-1. Business Context
-Customer churn occurs when clients close their accounts or stop using a bank's services. Because acquiring new customers is significantly more expensive than keeping existing ones, reducing churn is a top priority. This project uses a public bank dataset to examine customer characteristics and highlight patterns associated with churn. By combining exploratory data analysis, interactive Power BI reporting, and machine learning, the goal is to convert raw customer data into actionable retention strategies.
+Bank Customer Churn Prediction
 
-2. Target Audience
+1. Project Overview
 
-Bank Management: To get a clear view of customer loss trends and support long-term retention planning.
+This project aims to analyze bank customer churn using data analytics and machine learning techniques. The goal is to understand why customers leave the bank, identify patterns associated with customer churn, and help the bank improve customer retention.
 
-Customer Retention Teams: To identify specific customer segments that need direct outreach or tailored offers.
+The project uses a dataset containing 10,000 bank customer records with demographic, financial, and account-related information.
 
-Data & Analytics Teams: To inspect churn indicators and evaluate predictive modeling techniques.
+2. Business Problem
+
+Customer churn is a major challenge for banks because losing customers can reduce revenue and increase the cost of acquiring new customers.
+
+The bank needs to understand which customers are more likely to leave and what factors may be associated with their decisions. Without proper analysis, it can be difficult to identify high-risk customer groups and develop effective retention strategies.
 
 3. Project Objectives
 
-Calculate the overall customer churn rate across the business.
+Analyze the dataset and understand its main characteristics.
 
-Spot customer groups with disproportionately high churn rates.
+Measure the overall customer churn rate.
 
-Analyze how demographic and financial features relate to customer departures.
+Identify customer groups with higher churn rates.
 
-Build an interactive Power BI dashboard to share findings across teams.
+Explore the relationship between customer characteristics and churn.
 
-Train and evaluate a classification model to flag high-risk customers.
+Build an interactive dashboard using Power BI.
 
-Help retention teams prioritize which customer segments to focus on first.
+Develop a machine learning classification model to predict customer churn.
 
-4. Defining Churn
-In this project, a churned customer is defined strictly by the dataset's target column (indicated as having left the bank). Because the dataset represents a snapshot without explicit observation windows or timestamps, we will not assume a specific time frame (such as 30 or 90 days). The target variable will be validated against raw data before running any analysis.
+Identify customers who may be at higher risk of leaving the bank.
 
-5. Core Business Questions
+Provide actionable insights to support customer retention strategies.
 
-Overall Churn: What percentage of total customers have left the bank?
+4. Target Audience
 
-Geography: Which countries or regions experience the highest churn rates?
+Bank Management: To understand customer retention performance and support business decisions.
 
-Demographics: How does churn rate vary across different age brackets?
+Customer Retention Teams: To identify customer groups that may need targeted retention strategies.
 
-Engagement: Are active members noticeably less likely to churn than inactive members?
+Data and Analytics Teams: To analyze customer behavior and develop data-driven solutions.
 
-Financial Profile: How do account balance and the number of products held impact churn?
+5. Dataset Description
 
-Note: Group sizes will be reviewed during analysis to ensure small sample sizes do not skew conclusions.
+The dataset contains 10,000 customer records and 12 columns.
 
-6. Success Criteria
+It includes the following types of information:
 
-Power BI Dashboard
+Customer Information: Customer ID, country, gender, and age.
 
-Displays core high-level metrics clearly (Total Customers, Churned Count, Churn Rate).
+Financial Information: Credit score, account balance, and estimated salary.
 
-Offers interactive filters to slice data by demographics, location, and account details.
+Account Information: Tenure, number of products, credit card ownership, and active membership status.
 
-Presents clean, non-technical visuals that non-analysts can easily interpret.
+Target Variable: Churn, which indicates whether a customer left the bank.
 
-Produces summary numbers that match the Python analysis exactly.
+The customer_id column is used for customer identification and tracking, not as a predictive feature.
 
-Machine Learning Model
+6. Project Scope
 
-Tested on an untouched holdout set.
+The project will be completed in the following phases:
 
-Evaluated using Recall, Precision, F1-score, PR-AUC, and a Confusion Matrix.
+Phase 1 – Project Planning and Data Understanding: Define the business problem, document the project objectives, understand the dataset, and prepare the project structure.
 
-Outperforms a standard baseline model while managing the trade-off between false alarms and missed churners (accuracy alone will not be used to judge performance).
+Phase 2 – Data Cleaning and Exploratory Data Analysis (EDA): Inspect data quality, handle missing or inconsistent values if present, and explore patterns related to customer churn.
 
-7. Scope & Limitations
-This analysis relies on a static public dataset rather than live banking systems. Because there is no temporal tracking, the project focuses on identifying patterns within the available snapshot rather than predicting future churn over a specific calendar period. Results highlight correlation rather than direct cause-and-effect, providing a solid foundation for further investigation by retention teams.
+Phase 3 – SQL Analysis: Use SQL queries to analyze customer data and answer relevant business questions.
 
-## Initial Dataset Findings
+Phase 4 – Power BI Dashboard: Create an interactive dashboard to present key performance indicators and customer churn insights.
 
-The dataset contains 10,000 customer records. Of these, 2,037 customers (20.37%) are labeled as churned, while 7,963 customers (79.63%) are labeled as not churned.
+Phase 5 – Machine Learning: Build and evaluate a classification model to predict customer churn.
 
-These figures represent the distribution of the churn target in the available dataset. The observation window and exact business definition of churn have not yet been confirmed.
+Phase 6 – Final Reporting and Documentation: Summarize findings, document the workflow, and present business recommendations.
+
+7. Expected Deliverables
+
+Project documentation and business understanding.
+
+A cleaned and analyzed dataset.
+
+Exploratory data analysis with visualizations.
+
+SQL queries addressing business questions.
+
+An interactive Power BI dashboard.
+
+A trained and evaluated customer churn prediction model.
+
+A final report containing key findings and actionable recommendations.
